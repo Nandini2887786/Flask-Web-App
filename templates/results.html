@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apriori Algorithm Results</title>
+</head>
+<body>
+    <h1>Apriori Algorithm Results</h1>
+    <h2>Input File: {{ filename }}</h2>
+    <h3>Minimum Support: {{ min_support }}</h3>
+    
+    <h3>Frequent Itemsets:</h3>
+    <ul>
+        {% for itemset in frequent_itemsets %}
+            <li>{{ itemset }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{{ url_for('index') }}">Go Back</a>
+</body>
+</html>
